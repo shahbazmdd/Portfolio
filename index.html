@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Shahbaz | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
+
+
+</head>
+
+<body>
+
+    <!-- Navbar Section -->
+    <header class="navbar">
+        <h1 class="name"><a href="#top">Mohammed Shahbaz</a></h1>
+        <ul class="nav-links">
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="content">
+            <h1>HEY THERE, I'M<br>Mohammed Shahbaz</h1>
+            <div class="typing-container">
+                <p class="typing-text"></p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-container">
+            <div class="skill-icon">
+                <i class="fab fa-js"></i>
+            </div>
+            <div class="skill-icon">
+                <i class="fab fa-python"></i>
+            </div>
+            <div class="skill-icon">
+                <i class="fab fa-java"></i>
+            </div>
+            <div class="skill-icon">
+                <i class="fab fa-react"></i>
+            </div>
+            <div class="skill-icon">
+                <i class="devicon-c-plain"></i> <!-- C language icon with color -->
+            </div>
+            <div class="skill-icon">
+                <i class="fab fa-html5"></i>
+            </div>
+            <div class="skill-icon">
+                <i class="fab fa-css3-alt"></i>
+            </div>
+            <div class="skill-icon">
+                <i class="fab fa-bootstrap"></i>
+            </div>
+            <div class="skill-icon">
+                <i class="fab fa-figma"></i>
+            </div>
+            <div class="skill-icon">
+                <i class="fa-solid fa-database"></i> <!-- MySQL Icon -->
+            </div>
+
+        </div>
+    </section>
+    <!-- skills end-->
+    <hr class="section-divider">
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <!-- E-commerce Project -->
+            <a href="https://shahbazmdd.github.io/My-Ecom/" target="_blank" class="project-link">
+                <div class="project-card">
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <img src="images/ecom.png" alt="E-commerce Website" class="project-image">
+                    <div class="project-info">
+                        <h3>E-commerce Website</h3>
+                        <p>A responsive e-commerce site for watches, featuring a product gallery and cart functionality.
+                        </p>
+                    </div>
+                </div>
+            </a>
+
+
+            <!-- Add more projects here in the future -->
+        </div>
+
+        <a href="#" class="view-more-button">
+            <i class="eye-icon"></i> View More
+        </a>
+    </section>
+    <!-- Projects Section -->
+    <hr class="section-divider">
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Contact</h2>
+        <p>Feel free to reach out for any questions</p>
+        <div class="contact-section section" id="contact">
+            <form class="contact-form" action="" method="POST" onsubmit="resetForm(event)">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="tel" name="phone" placeholder="Your Phone" pattern="[0-9]{10}" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+        <hr class="section-divider">
+        
+        <div class="contact-links">
+            <a href="https://www.linkedin.com/in/shahbazmohammedd/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/shahbazmdd" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/shahbazmohammedd" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://x.com/shahbazmdd" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="30" height="30">
+                    <path d="M20.71 3.29a1 1 0 0 0-1.42 0L12 10.59 4.71 3.29a1 1 0 1 0-1.42 1.42L10.59 12l-7.3 7.29a1 1 0 1 0 1.42 1.42L12 13.41l7.29 7.3a1 1 0 0 0 1.42-1.42L13.41 12l7.3-7.29a1 1 0 0 0 0-1.42z"/>
+                </svg>
+            </a>
+            <a href="mailto:mohammeddshahbaz@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="copyright">&copy;2025  Shahbaz </p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
