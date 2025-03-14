@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&family=VT323&display=swap');
 /* General Styles */
 body, html {
     margin: 0;
@@ -5,7 +7,7 @@ body, html {
     box-sizing: border-box;
     background-color: #121212;
     color: #fff;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Press Start 2P", system-ui;
     scroll-behavior: smooth;
 }
 body {
@@ -115,13 +117,17 @@ body {
     padding: 0 20px;
 }
 .content{
-    font-family: 'IBM Plex Mono', monospace;
+     font-family: "VT323", monospace;
     
 }
 .content h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+   font-size: 120px;
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    text-shadow: -2px 5px 9px rgba(240, 233, 233, 0.25);
+    text-align: center;
+    margin: 15rem auto 0;
+    pointer-events: none;
 }
 
 .content p {
