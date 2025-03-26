@@ -1,50 +1,86 @@
 console.log("Welcome to My Portfolio!");
-// for navlinks transition
-const navLinks = document.querySelector('.nav-links');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 0) {  // Detect any scroll
-        navLinks.classList.add('centered');
-    } else {
-        navLinks.classList.remove('centered');
+// Navbar Scroll Effect
+window.addEventListener("scroll", () => {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) { 
+        navbar.classList.add("shrink");
+    } else { 
+        navbar.classList.remove("shrink");
     }
 });
-//end for navlinks
 
-//for typing text
-const typingText = document.querySelector('.typing-text');
-const textToType = "Frontend Developer, AIML Enthusiast, Tech Explorer";
-let index = 0;
+// Smooth Scroll for Navigation Links
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".nav-home").addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    document.querySelectorAll(".nav-item").forEach((item) => {
+        item.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default anchor behavior
+
+            const targetText = this.textContent.trim().toLowerCase();
+
+            if (targetText === "works") {
+                document.querySelector("#projects").scrollIntoView({ behavior: "smooth", block: "start" });
+            } else if (targetText === "contact") {
+                document.querySelector("#contact").scrollIntoView({ behavior: "smooth", block: "end" });
+            }
+        });
+    });
+});
+
+// ✅ Fix: Keep Typing Effect Running
+const typingText = document.querySelector(".typing-text");
+const wordsToType = ["Frontend Developer", "AIML Enthusiast", "Tech Explorer"];
+let wordIndex = 0;
+let charIndex = 0;
 let isDeleting = false;
 
 function type() {
+    const currentWord = wordsToType[wordIndex];
+
     if (isDeleting) {
-        typingText.textContent = textToType.substring(0, index);
-        index--;
-        if (index === 0) {
-            isDeleting = false;  // Stop deleting, start typing again
+        typingText.textContent = currentWord.substring(0, charIndex);
+        charIndex--;
+
+        if (charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % wordsToType.length; // Move to next word
         }
     } else {
-        typingText.textContent = textToType.substring(0, index);
-        index++;
-        if (index > textToType.length) {
-            setTimeout(() => { isDeleting = true; }, 1000);  // Pause before deleting
+        typingText.textContent = currentWord.substring(0, charIndex);
+        charIndex++;
+
+        if (charIndex > currentWord.length) {
+            setTimeout(() => { isDeleting = true; }, 1000); // Pause before deleting
         }
     }
 
-    const speed = isDeleting ? 30 : 50;  // Faster deletion, slower typing
+    const speed = isDeleting ? 50 : 100;
     setTimeout(type, speed);
 }
-type();
-//end typing text
 
-//for form submit
-function resetForm(event) {
-    event.preventDefault(); 
-    const form = event.target;
+// ✅ Restart Typing Effect on Click (Fixes Navigation Issue)
+document.querySelectorAll(".nav-item, .nav-home").forEach((item) => {
+    item.addEventListener("click", () => {
+        setTimeout(type, 500); // Restart typing after scroll
+    });
+});
+
+type(); // Start typing animation
+
+// Add animation effect on click anywhere on the screen
+document.addEventListener('click', function(e) {
+    const circle = document.createElement('div');
+    circle.classList.add('animation-effect');
+    circle.style.left = `${e.clientX - 10}px`;
+    circle.style.top = `${e.clientY - 10}px`;
+    document.body.appendChild(circle);
+
+    // Remove the circle after the animation is done
     setTimeout(() => {
-        alert("Your message has been sent successfully!");
-        form.reset();  
-    }, 500);  
-}
-//end form submit
+        circle.remove();
+    }, 250);
+});
