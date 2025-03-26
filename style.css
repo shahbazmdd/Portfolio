@@ -19,6 +19,15 @@ body {
   background-repeat: no-repeat;
 }
 
+/* Hide scrollbar but allow scrolling */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Prevent elements from overflowing */
+html, body {
+  overflow-x: hidden;
+}
 
 
 .section {
