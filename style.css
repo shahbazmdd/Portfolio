@@ -32,7 +32,6 @@
     overflow-x: hidden;
   }
 
-
   .section {
     padding: 50px 20px;
     text-shadow: -2px 5px 9px rgba(240, 233, 233, 0.25);
@@ -584,6 +583,8 @@
 
   .contact-links {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 15px;
   }
 
@@ -654,25 +655,27 @@
 
   /* For Tablets (768px and below) */
   @media (max-width: 768px) {
-
+    .section {
+      padding: 30px 10px;
+  }
+  body::-webkit-scrollbar {
+    display: none;
+  }
     .navbar {
-      display: flex;
-      margin-left: 30%;
+      display: none;
       flex-direction: row;
       justify-content: space-between;
-      align-items: right;
+      align-items: center;      
       padding: 10px 20px;
-
       position: fixed;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
+      width: 60%;
       z-index: 1000;
+    }
+    .nav-home{
+      font-size: 17px;
     }
 
     .navbar ul {
-      float: right;
-
       font-size: medium;
       padding: 10px;
       right: 5px;
@@ -712,14 +715,21 @@
       grid-template-columns: 1fr;
       /* Two cards per row */
     }
+    .certificate-title{
+      font-size: 27px;
+    }
+
 
     .section-title {
-      font-size: medium;
+      font-size: 30px;
     }
 
     .skills-container {
       gap: 10px;
       max-width: 400px;
+    }
+    .sectionh2{
+      font-size: 20px;
     }
   }
 
@@ -750,6 +760,9 @@
       width: 100%;
       text-align: center;
     }
+    .section-title {
+      font-size: 1.5rem;
+  }
 
     .project-info h3 {
       font-size: small;
@@ -788,9 +801,6 @@
       max-width: 100%;
     }
 
-    .section-title {
-      font-size: small;
-    }
 
     .skill-icon {
       display: flex;
@@ -835,3 +845,22 @@
       opacity: 0;
     }
   }
+
+
+  /* new */
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .navbar {
+      flex-direction: row;
+      text-align: center;
+      padding: 7px ;
+      font-size: 17px;
+  }
+
+  .nav-links,.nav-home,.nav-item {
+      flex-direction: row;
+      font-size:17px ;
+      gap: 15px;
+  }
+}
