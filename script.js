@@ -3,9 +3,9 @@ console.log("Welcome to My Portfolio!");
 // Navbar Scroll Effect
 window.addEventListener("scroll", () => {
     const navbar = document.querySelector(".navbar");
-    if (window.scrollY > 50) { 
+    if (window.scrollY > 50) {
         navbar.classList.add("shrink");
-    } else { 
+    } else {
         navbar.classList.remove("shrink");
     }
 });
@@ -72,7 +72,7 @@ document.querySelectorAll(".nav-item, .nav-home").forEach((item) => {
 type(); // Start typing animation
 
 // Add animation effect on click anywhere on the screen
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
     const circle = document.createElement('div');
     circle.classList.add('animation-effect');
     circle.style.left = `${e.clientX - 10}px`;
@@ -84,3 +84,4 @@ document.addEventListener('click', function(e) {
         circle.remove();
     }, 250);
 });
+
