@@ -696,6 +696,10 @@
       width: 100%;
       text-align: center;
     }
+    .skill-icon{
+      height: 40px;
+      width: 40px;
+    }
 
     .project-info h3 {
       font-size: small;
@@ -715,10 +719,21 @@
       grid-template-columns: 1fr;
       /* Two cards per row */
     }
-    .certificate-title{
-      font-size: 27px;
+    .view-more-button{
+      padding: 15px;
+      font-size: 25px;
     }
-
+    .arrow-icon{
+      height: 20px;
+    }
+    .certificate-title{
+      font-size: 22px;
+    }
+    .contact-btn{
+      padding: 15px 15px;
+      font-size: 15px;
+    }
+    
 
     .section-title {
       font-size: 30px;
@@ -730,6 +745,13 @@
     }
     .sectionh2{
       font-size: 20px;
+    }
+    .contact-links a{
+      font-size: 20px;
+    }
+    .copyright{
+      font-size: 10px;
+      margin-right: 15px;
     }
   }
 
