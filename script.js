@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // ✅ Fix: Keep Typing Effect Running
 const typingText = document.querySelector(".typing-text");
-const wordsToType = ["Frontend Developer", "AIML Enthusiast", "Tech Explorer"];
+const wordsToType = ["Full-Stack Developer", "AIML Enthusiast", "Tech Explorer"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
